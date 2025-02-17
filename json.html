@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json</title>
+  </head>
+  <body>
+    <h1>
+ "love should be a tree whose roots are deep in the earth,but whose branches extend into heaven"....
+    </h1>
+    <script>
+      let details = {
+        name: "Nimmy",
+        email: "Nimmypatel@gmail.com",
+        age: 21,
+        city: "hyd",
+      };
+      let makejson = JSON.stringify(details);
+      // console.log(makejson)
+      let storejson = localStorage.setItem("user1", makejson);
+      let getdata = JSON.parse(localStorage.getItem("user1"));
+      console.log(getdata);
+    </script>
+  </body>
+</html>
